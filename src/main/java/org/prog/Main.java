@@ -55,14 +55,28 @@ public class Main {
 //        followTheRoute(truck);
 //        followTheRoute(bigTruck);
 
+        //my homework
+        AutomaticElectricCar autoECar = new AutomaticElectricCar();
+        autoECar.switchGearsAutomat();
+        System.out.println("");
+
+        movement(autoECar);
+        System.out.println("");
+
         Car car = new Car();
         car.goTo("Lviv");
         car.goTo("Dnipro", "Chernihiv");
         car.goTo("Kyiv", "Kharkiv", "Poltava");
         car.goTo("Odessa", "Kyiv", "Dnipro", "food");
+        car.goTo("Kyiv", "Odessa", "Mykolaiv", "furniture", "Sofiivska Borshchahivka");
 
     }
 
+    public static void movement(IMovable iCar) {
+        iCar.moveForward();
+        iCar.moveBackward();
+    }
+/*
     public static void paintCar(Car car) {
         car.color = "black";
     }
@@ -71,4 +85,6 @@ public class Main {
         iCar.turnLeft();
         iCar.turnRight();
     }
+*/
+
 }
