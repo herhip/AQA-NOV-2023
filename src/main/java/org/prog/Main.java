@@ -35,7 +35,7 @@ public class Main {
 //        car.goTo("Dnipro", "Chernihiv");
 //        car.goTo("Kyiv", "Kharkiv", "Poltava");
 //        car.goTo("Odessa", "Kyiv", "Dnipro", "food");
-    }
+
 
         //my homework
         AutomaticElectricCar autoECar = new AutomaticElectricCar();
@@ -52,15 +52,7 @@ public class Main {
         car.goTo("Odessa", "Kyiv", "Dnipro", "food");
         car.goTo("Kyiv", "Odessa", "Mykolaiv", "furniture", "Sofiivska Borshchahivka");
 
-    private static void increment(Integer input){
-        input += 1000;
-        System.out.println(input);
-    }
 
-    public static void movement(IMovable iCar) {
-        iCar.moveForward();
-        iCar.moveBackward();
-    }
 /*
     public static void paintCar(Car car) {
         car.color = "black";
@@ -72,4 +64,15 @@ public class Main {
     }
 */
 
+    }
+    private static void increment (Integer input){
+        input += 1000;
+        System.out.println(input);
+    }
+
+    public static void movement (IMovable iCar){
+        iCar.moveForward();
+        iCar.moveBackward();
+    }
 }
+
