@@ -52,4 +52,18 @@ public class Car implements ITurnable {
                 " passing through " + passingThrough + " with " + withCargo + " cargo" + " and return destination is " + returnDestination);
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Car) {
+            return ((Car) obj).color.equals(this.color);
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return color.hashCode();
+    }
+}
+
 }
