@@ -2,7 +2,7 @@ package org.prog.web.page;
 
 import org.openqa.selenium.WebDriver;
 
-public class WikiPage {
+public class  WikiPage {
 
     private final WebDriver driver;
 
