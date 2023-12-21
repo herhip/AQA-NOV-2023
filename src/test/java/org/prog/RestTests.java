@@ -16,12 +16,18 @@ import java.util.List;
 
 public class RestTests {
 
+    //якщо треба простий тест, який запрошує данні
+    @Test
+    public void simpleRestTest() {
+        RestAssured.get("https://randomuser.me/api/?inc=gender,name,nat,location&noinfo").body().prettyPrint();
+    }
+
     @Test
     public void basicRestTest() {
         RequestSpecification requestSpecification = RestAssured.given();
-        requestSpecification.queryParam("inc", "gender,name,nat");
+        requestSpecification.queryParam("inc", "gender,name,nat,location"); //added location parameter
         requestSpecification.queryParam("noinfo");
-        requestSpecification.queryParam("results", "10");
+        requestSpecification.queryParam("results", "5");
         requestSpecification.basePath("/api/");
         requestSpecification.baseUri("https://randomuser.me/");
 
@@ -35,8 +41,7 @@ public class RestTests {
         List<PersonDto> persons = dto.getResults();
 
         for (PersonDto person : persons) {
-            System.out.println(person.getName().getFirst());
-            System.out.println(person.getName().getLast());
+            System.out.println(person.getName().getFirst() + " " + person.getName().getLast());
         }
 
         Assert.assertTrue(
@@ -44,6 +49,8 @@ public class RestTests {
                 "no male users generated!"
         );
 
+
+//коли нам треба отримати якісь дані по одному параметру, коли решта параметрів нам невідомі
 
 //        LinkedHashMap<String, String> userData0 =
 //                JsonPath.parse(response.body().asString()).read("$.results[0]");

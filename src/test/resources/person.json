@@ -1,13 +1,34 @@
-{
-  "results": [
-    {
-      "gender": "female",
-      "name": {
-        "title": "Mrs",
-        "first": "Gloria",
-        "last": "Navarro"
-      },
-      "nat": "ES"
+ {
+      "results": [
+        {
+          "gender": "female",
+          "name": {
+            "title": "Miss",
+            "first": "Amparo",
+            "last": "Vicente"
+          },
+          "location": {
+            "street": {
+              "number": 6568,
+              "name": "Calle de Ángel García"
+            },
+            "city": "Pontevedra",
+            "state": "Ceuta",
+            "country": "Spain",
+            "postcode": 53486,
+            "coordinates": {
+              "latitude": "-30.8367",
+              "longitude": "170.4217"
+            },
+            "timezone": {
+              "offset": "+1:00",
+              "description": "Brussels, Copenhagen, Madrid, Paris"
+            }
+          },
+          "nat": "ES"
+        }
+      ]
     }
-  ]
-}
+
+
+

@@ -9,9 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class PersonDto {
-    private NameDto name;
-    private String gender;
-    private String nat;
-    private LocationDto location;
+public class StreetDto {
+    private String number;
+    private String name;
 }
