@@ -1,6 +1,5 @@
 package org.prog.web.amazon;
 
-import dev.failsafe.internal.util.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -19,24 +18,10 @@ public class AmazonMain {
     }
 
     public void setSearchValue(String searchValue) {
-        WebElement AmazonSearch = driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
+        WebElement AmazonSearch = driver.findElement(By.name("field-keywords"));
         AmazonSearch.sendKeys(searchValue);
         AmazonSearch.sendKeys(Keys.ENTER);
     }
-
 }
-
-
-    /*
-    public void firstElementText() {
-        WebElement firstPrice = driver.findElement(By.xpath("(//span[@class='a-price'])[1]"));
-        new WebDriverWait(driver, Duration.ofSeconds(30L))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//span[@class='a-price'])[1]")));
-        if (firstPrice.isDisplayed()) {
-            System.out.println("Successfully!");
-        }
-    }
-
-     */
 
 
