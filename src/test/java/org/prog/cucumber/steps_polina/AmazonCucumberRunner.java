@@ -2,13 +2,12 @@ package org.prog.cucumber.steps_polina;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.prog.web.amazon.AmazonMain;
+import org.prog.web.amazon.AmazonPage;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-import static org.prog.cucumber.steps_polina.PolinaBaseSteps.driver;
+import static org.prog.cucumber.steps_polina.AmazonSearchParametrizedSteps.driver;
 
 @CucumberOptions(
         features = "src/test/resources/features_polina",
@@ -19,12 +18,12 @@ import static org.prog.cucumber.steps_polina.PolinaBaseSteps.driver;
                 "html:target/cucumber-report.html"
 }
 )
-public class PolinaCucumberRunner extends AbstractTestNGCucumberTests {
+public class AmazonCucumberRunner extends AbstractTestNGCucumberTests {
 
     @BeforeSuite
     public void setUp() {
         driver = new EdgeDriver();
-        PolinaBaseSteps.amazonPage = new AmazonMain(driver);
+        AmazonSearchParametrizedSteps.amazonPage = new AmazonPage(driver);
     }
 
     @AfterSuite
@@ -33,8 +32,6 @@ public class PolinaCucumberRunner extends AbstractTestNGCucumberTests {
                 driver.quit();
             }
         }
-
-
     }
 
 

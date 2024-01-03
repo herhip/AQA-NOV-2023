@@ -5,10 +5,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class AmazonMain {
+public class AmazonPage {
     private final WebDriver driver;
 
-    public AmazonMain(WebDriver driver) {
+    public AmazonPage(WebDriver driver) {
         this.driver = driver;
     }
 
