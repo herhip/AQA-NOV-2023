@@ -1,7 +1,8 @@
 Feature: Integration of API, DB and Selenium
 
-  Scenario: Do something
-    Given I request 3 users from random user service as "CROWD_1"
+  @severity=critical
+  Scenario: Do something critical
+    Given I request 1 users from random user service as "CROWD_1"
     Given I store "CROWD_1" users to DB
     And I retrieve a random user from DB as "PERSON_1"
     Given I load google page
